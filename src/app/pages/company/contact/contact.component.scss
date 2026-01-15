@@ -1,0 +1,121 @@
+@import '../company-shared';
+
+.contact-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.contact-form-wrapper {
+  h2 {
+    font-size: 1.75rem;
+    color: var(--gray-900);
+    margin-bottom: 32px;
+  }
+}
+
+.contact-form {
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    
+    label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--gray-700);
+      margin-bottom: 8px;
+    }
+    
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      font-family: inherit;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      transition: all 0.3s var(--ease-smooth);
+      
+      &:focus {
+        outline: none;
+        border-color: var(--orb-green);
+        box-shadow: 0 0 0 3px rgba(0, 200, 83, 0.1);
+      }
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    select {
+      cursor: pointer;
+    }
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info-card {
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  
+  .info-icon {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    margin-bottom: 8px;
+  }
+  
+  a {
+    font-size: 0.95rem;
+    color: var(--orb-green);
+    font-weight: 500;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .address {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+  }
+}

@@ -1,0 +1,122 @@
+@import '../company-shared';
+
+.culture-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  
+  @media (max-width: 968px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+
+.perk-card {
+  background: var(--gray-50);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  text-align: center;
+  transition: all 0.3s var(--ease-smooth);
+  
+  &:hover {
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .perk-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  
+  h3 {
+    font-size: 1.15rem;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+  }
+}
+
+.positions-section {
+  padding: var(--section-padding) 0;
+  background: var(--gray-50);
+}
+
+.positions-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.position-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  margin-bottom: 16px;
+  transition: all 0.3s var(--ease-smooth);
+  
+  @media (max-width: 640px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+  
+  &:hover {
+    border-color: var(--orb-green);
+    box-shadow: var(--shadow-md);
+  }
+  
+  h3 {
+    font-size: 1.15rem;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+  }
+  
+  .position-meta {
+    display: flex;
+    gap: 16px;
+    
+    @media (max-width: 640px) {
+      justify-content: center;
+    }
+    
+    span {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      
+      &.dept {
+        color: var(--orb-green);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.no-match {
+  text-align: center;
+  padding: 40px 20px;
+  
+  p {
+    font-size: 1rem;
+    color: var(--gray-500);
+    
+    a {
+      color: var(--orb-green);
+      font-weight: 500;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import '../../page-shared';
+
+.templates-grid-section {
+  padding: 60px 0 var(--section-padding);
+}
+
+.template-category {
+  margin-bottom: 64px;
+  
+  .category-title {
+    font-size: 1.75rem;
+    color: var(--gray-900);
+    margin-bottom: 32px;
+  }
+}
+
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  
+  @media (max-width: 968px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+
+.template-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all 0.3s var(--ease-smooth);
+  
+  &:hover {
+    border-color: var(--orb-green);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  
+  .template-preview {
+    height: 140px;
+    background: var(--gray-100);
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+    
+    &.customer-sat { background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); }
+    &.nps { background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); }
+    &.feedback { background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%); }
+    &.engagement { background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%); }
+    &.enps { background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%); }
+    &.onboarding { background: linear-gradient(135deg, #E0F7FA 0%, #B2EBF2 100%); }
+    &.market { background: linear-gradient(135deg, #FBE9E7 0%, #FFCCBC 100%); }
+    &.brand { background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD9 100%); }
+    &.concept { background: linear-gradient(135deg, #F1F8E9 0%, #DCEDC8 100%); }
+    &.event-feedback { background: linear-gradient(135deg, #FFFDE7 0%, #FFF9C4 100%); }
+    &.webinar { background: linear-gradient(135deg, #ECEFF1 0%, #CFD8DC 100%); }
+    &.registration { background: linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%); }
+  }
+  
+  .template-info {
+    padding: 24px;
+    
+    h3 {
+      font-size: 1.1rem;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+    }
+    
+    p {
+      font-size: 0.9rem;
+      color: var(--gray-500);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    
+    .template-meta {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+    }
+  }
+  
+  .btn {
+    margin: 0 24px 24px;
+    width: calc(100% - 48px);
+  }
+}

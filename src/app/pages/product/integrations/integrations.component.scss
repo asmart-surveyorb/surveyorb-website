@@ -1,0 +1,133 @@
+@import '../../page-shared';
+
+.integrations-list {
+  padding: 60px 0 var(--section-padding);
+}
+
+.integration-category {
+  margin-bottom: 64px;
+  
+  .category-title {
+    font-size: 1.75rem;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+  }
+  
+  .category-desc {
+    font-size: 1rem;
+    color: var(--gray-500);
+    margin-bottom: 32px;
+  }
+}
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  
+  @media (max-width: 968px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+
+.integration-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  transition: all 0.3s var(--ease-smooth);
+  
+  &:hover {
+    border-color: var(--orb-green);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  
+  .integration-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--white);
+    
+    &.salesforce { background: #00A1E0; &::before { content: 'SF'; } }
+    &.hubspot { background: #FF7A59; &::before { content: 'HS'; } }
+    &.pipedrive { background: #2B3D4F; &::before { content: 'PD'; } }
+    &.slack { background: #4A154B; &::before { content: 'S'; } }
+    &.teams { background: #6264A7; &::before { content: 'T'; } }
+    &.email { background: var(--orb-green); &::before { content: '@'; } }
+    &.sheets { background: #0F9D58; &::before { content: 'G'; } }
+    &.notion { background: #000000; &::before { content: 'N'; } }
+    &.airtable { background: #FCB400; &::before { content: 'A'; } }
+    &.zapier { background: #FF4A00; &::before { content: 'Z'; } }
+    &.make { background: #6D4AFF; &::before { content: 'M'; } }
+    &.webhooks { background: var(--gray-700); &::before { content: '</>'; } }
+  }
+  
+  h3 {
+    font-size: 1.15rem;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+  }
+  
+  p {
+    font-size: 0.9rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+  }
+}
+
+.api-section {
+  padding: var(--section-padding) 0;
+  background: var(--gray-900);
+}
+
+.api-content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  
+  h2 {
+    font-size: 2.25rem;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+}
+
+.api-features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.api-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  
+  .feature-icon {
+    font-size: 1.25rem;
+  }
+  
+  span:last-child {
+    font-size: 0.95rem;
+    color: var(--gray-300);
+    font-weight: 500;
+  }
+}

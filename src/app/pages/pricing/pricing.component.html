@@ -1,0 +1,143 @@
+<app-header />
+
+<main class="pricing-page">
+  <!-- Hero Section -->
+  <section class="pricing-hero">
+    <div class="container">
+      <span class="section-label">Pricing</span>
+      <h1 class="pricing-title">Simple, transparent pricing</h1>
+      <p class="pricing-subtitle">Choose the plan that fits your needs. Start free and scale as you grow.</p>
+    </div>
+  </section>
+  
+  <!-- Stripe Pricing Table Section -->
+  <section class="pricing-table-section">
+    <div class="container">
+      <!-- STRIPE_PRICING_TABLE_PLACEHOLDER: Replace this div with Stripe embed code -->
+      <!-- 
+        To add Stripe Pricing Table:
+        1. Go to Stripe Dashboard > Products > Pricing Tables
+        2. Create or select your pricing table
+        3. Copy the embed code
+        4. Replace the placeholder div below with the Stripe script and stripe-pricing-table element
+        
+        Example:
+        <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
+        <stripe-pricing-table pricing-table-id="prctbl_xxx" publishable-key="pk_xxx"></stripe-pricing-table>
+      -->
+      <div id="stripe-pricing-table" class="stripe-embed-container">
+        <div class="pricing-placeholder">
+          <div class="placeholder-grid">
+            <!-- Starter Plan -->
+            <div class="placeholder-card">
+              <div class="plan-header">
+                <h3 class="plan-name">Starter</h3>
+                <p class="plan-desc">Perfect for individuals</p>
+              </div>
+              <div class="plan-price">
+                <span class="price">$0</span>
+                <span class="period">/month</span>
+              </div>
+              <ul class="plan-features">
+                <li>3 active surveys</li>
+                <li>100 responses/month</li>
+                <li>Basic analytics</li>
+                <li>Email support</li>
+                <li>Survey templates</li>
+              </ul>
+              <a href="#signup" class="btn btn-secondary">Get Started Free</a>
+            </div>
+            
+            <!-- Pro Plan -->
+            <div class="placeholder-card featured">
+              <div class="featured-badge">Most Popular</div>
+              <div class="plan-header">
+                <h3 class="plan-name">Pro</h3>
+                <p class="plan-desc">For growing teams</p>
+              </div>
+              <div class="plan-price">
+                <span class="price">$29</span>
+                <span class="period">/month</span>
+              </div>
+              <ul class="plan-features">
+                <li>Unlimited surveys</li>
+                <li>5,000 responses/month</li>
+                <li>Advanced analytics</li>
+                <li>AI survey generation</li>
+                <li>Priority support</li>
+                <li>Custom branding</li>
+                <li>Team collaboration</li>
+              </ul>
+              <a href="#signup" class="btn btn-primary">Start Free Trial</a>
+            </div>
+            
+            <!-- Business Plan -->
+            <div class="placeholder-card">
+              <div class="plan-header">
+                <h3 class="plan-name">Business</h3>
+                <p class="plan-desc">For larger organizations</p>
+              </div>
+              <div class="plan-price">
+                <span class="price">$99</span>
+                <span class="period">/month</span>
+              </div>
+              <ul class="plan-features">
+                <li>Unlimited surveys</li>
+                <li>25,000 responses/month</li>
+                <li>Advanced AI features</li>
+                <li>API access</li>
+                <li>SSO & SAML</li>
+                <li>Dedicated support</li>
+                <li>Advanced integrations</li>
+              </ul>
+              <a href="#signup" class="btn btn-secondary">Start Free Trial</a>
+            </div>
+          </div>
+          
+          <div class="enterprise-banner">
+            <div class="enterprise-content">
+              <h3>Enterprise</h3>
+              <p>Need more? Custom plans with unlimited responses, advanced security, and dedicated support.</p>
+            </div>
+            <a href="/contact" class="btn btn-primary">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-description">Everything you need to know about our pricing and plans.</p>
+      </div>
+      
+      <div class="faq-list">
+        @for (faq of faqs; track $index) {
+          <div class="faq-item" [class.open]="openFaq() === $index">
+            <button class="faq-question" (click)="toggleFaq($index)">
+              <span>{{ faq.question }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>{{ faq.answer }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-cta-section 
+  title="Ready to get started?"
+  description="Start collecting feedback today with our free plan. No credit card required."
+  primaryButtonText="Start Free"
+  secondaryButtonText=""
+/>
+
+<app-footer />

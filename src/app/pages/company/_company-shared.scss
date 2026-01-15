@@ -1,0 +1,140 @@
+@import '../page-shared';
+
+/* Company Page Styles */
+.company-hero {
+  @extend .page-hero;
+  padding: 100px 0 80px;
+}
+
+.story-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.story-content {
+  h2 {
+    font-size: 2rem;
+    color: var(--gray-900);
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: var(--gray-500);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+}
+
+.story-visual {
+  background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+  border-radius: var(--radius-xl);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  .visual-placeholder {
+    font-size: 4rem;
+  }
+}
+
+.values-section {
+  padding: var(--section-padding) 0;
+  background: var(--gray-50);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  
+  @media (max-width: 968px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 640px) { grid-template-columns: 1fr; }
+}
+
+.value-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  text-align: center;
+  transition: all 0.3s var(--ease-smooth);
+  
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  
+  .value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+  }
+  
+  p {
+    font-size: 0.95rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+  }
+}
+
+.team-section {
+  padding: var(--section-padding) 0;
+  background: var(--white);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  
+  @media (max-width: 968px) { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 768px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 480px) { grid-template-columns: 1fr; }
+}
+
+.team-member {
+  text-align: center;
+  
+  .member-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-300) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--gray-500);
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+  }
+  
+  .role {
+    font-size: 0.9rem;
+    color: var(--orb-green);
+    font-weight: 500;
+  }
+}
