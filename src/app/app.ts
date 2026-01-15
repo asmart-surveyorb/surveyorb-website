@@ -9,4 +9,11 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Survey Orb');
+  
+  // Active tab for showcase section
+  protected readonly activeTab = signal('ai-insights');
+  
+  setActiveTab(tabId: string): void {
+    this.activeTab.set(tabId);
+  }
 }

@@ -265,7 +265,7 @@
   </div>
 </section>
 
-<!-- Showcase / Use Cases Section - Featured + Horizontal Scroll -->
+<!-- Showcase / Use Cases Section - Scrollable Tabs -->
 <section class="showcase-section" id="use-cases">
   <div class="container">
     <div class="section-header">
@@ -277,100 +277,56 @@
     </div>
   </div>
   
-  <!-- Featured Use Case with Abstract Survey Visual -->
-  <div class="showcase-featured">
-    <div class="showcase-featured-visual">
-      <div class="showcase-abstract">
-        <div class="abstract-header">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
+  <div class="showcase-container">
+    <!-- Left side - Scrollable tabs -->
+    <div class="showcase-tabs">
+      <div class="showcase-tab" [class.active]="activeTab() === 'ai-insights'" (click)="setActiveTab('ai-insights')">
+        <div class="tab-header">
+          <div class="tab-icon icon-green">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <span class="tab-title">Get actionable insights with AI</span>
         </div>
-        <div class="abstract-survey">
-          <div class="abstract-question">
-            <div class="question-label">Question 1 of 5</div>
-            <div class="question-text">How satisfied are you with our service?</div>
-            <div class="question-options">
-              <div class="option">
-                <span class="option-radio"></span>
-                <span class="option-text">Very Satisfied</span>
-              </div>
-              <div class="option selected">
-                <span class="option-radio"></span>
-                <span class="option-text">Satisfied</span>
-              </div>
-              <div class="option">
-                <span class="option-radio"></span>
-                <span class="option-text">Neutral</span>
-              </div>
-            </div>
-          </div>
-          <div class="abstract-rating">
-            <div class="rating-label">Question 2 of 5</div>
-            <div class="rating-text">Rate your overall experience</div>
-            <div class="rating-stars">
-              <span class="star filled">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-              </span>
-              <span class="star filled">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-              </span>
-              <span class="star filled">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-              </span>
-              <span class="star filled">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-              </span>
-              <span class="star">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-              </span>
-            </div>
-          </div>
+        <div class="tab-content">
+          <p class="tab-description">Transform raw feedback into meaningful insights. Our AI analyzes responses in real-time to surface trends and sentiment.</p>
+          <a href="#" class="tab-link">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
-    </div>
-    <div class="showcase-featured-content">
-      <span class="showcase-tag">Featured</span>
-      <h3 class="showcase-title">Customer Experience Excellence</h3>
-      <p class="showcase-description">
-        Capture real-time feedback at every touchpoint. Beautiful, engaging surveys that customers actually want to complete. Turn insights into improved experiences.
-      </p>
-      <div class="showcase-stats">
-        <div class="showcase-stat">
-          <div class="stat-value">94%</div>
-          <div class="stat-label">Completion rate</div>
+      
+      <div class="showcase-tab" [class.active]="activeTab() === 'multichannel'" (click)="setActiveTab('multichannel')">
+        <div class="tab-header">
+          <div class="tab-icon icon-teal">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <span class="tab-title">Collect feedback from every channel</span>
         </div>
-        <div class="showcase-stat">
-          <div class="stat-value">2.5x</div>
-          <div class="stat-label">More responses</div>
-        </div>
-        <div class="showcase-stat">
-          <div class="stat-value">48h</div>
-          <div class="stat-label">Avg. time to insights</div>
+        <div class="tab-content">
+          <p class="tab-description">Email, SMS, web, social media - reach your audience wherever they are. Unified dashboard for all responses.</p>
+          <a href="#" class="tab-link">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <!-- Horizontal Scrolling Cards with Icon Visuals -->
-  <div class="showcase-scroll-wrapper">
-    <div class="showcase-scroll">
-      <div class="showcase-card">
-        <div class="showcase-icon-visual theme-purple">
-          <span class="shape shape-1"></span>
-          <span class="shape shape-2"></span>
-          <span class="shape shape-3"></span>
-          <div class="icon-container">
+      
+      <div class="showcase-tab" [class.active]="activeTab() === 'employee'" (click)="setActiveTab('employee')">
+        <div class="tab-header">
+          <div class="tab-icon icon-purple">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
@@ -378,111 +334,411 @@
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </div>
+          <span class="tab-title">Measure employee engagement</span>
         </div>
-        <div class="showcase-content">
-          <span class="showcase-tag">Employee Experience</span>
-          <h3 class="showcase-title">Workplace Satisfaction</h3>
-          <p class="showcase-description">
-            Understand how your team feels with engaging pulse surveys and comprehensive assessments.
-          </p>
-        </div>
-      </div>
-      
-      <div class="showcase-card">
-        <div class="showcase-icon-visual theme-teal">
-          <span class="shape shape-1"></span>
-          <span class="shape shape-2"></span>
-          <span class="shape shape-3"></span>
-          <div class="icon-container">
+        <div class="tab-content">
+          <p class="tab-description">Pulse surveys, eNPS tracking, and sentiment analysis. Understand your team's satisfaction and take action.</p>
+          <a href="#" class="tab-link">
+            Learn more
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
-          </div>
-        </div>
-        <div class="showcase-content">
-          <span class="showcase-tag">HR & Recruitment</span>
-          <h3 class="showcase-title">Exit Interview Insights</h3>
-          <p class="showcase-description">
-            Learn why employees leave and identify opportunities to improve retention rates.
-          </p>
+          </a>
         </div>
       </div>
       
-      <div class="showcase-card">
-        <div class="showcase-icon-visual theme-amber">
-          <span class="shape shape-1"></span>
-          <span class="shape shape-2"></span>
-          <span class="shape shape-3"></span>
-          <div class="icon-container">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-            </svg>
-          </div>
-        </div>
-        <div class="showcase-content">
-          <span class="showcase-tag">Learning & Development</span>
-          <h3 class="showcase-title">Training Effectiveness</h3>
-          <p class="showcase-description">
-            Evaluate training programs and identify skill gaps to improve learning outcomes.
-          </p>
-        </div>
-      </div>
-      
-      <div class="showcase-card">
-        <div class="showcase-icon-visual theme-coral">
-          <span class="shape shape-1"></span>
-          <span class="shape shape-2"></span>
-          <span class="shape shape-3"></span>
-          <div class="icon-container">
+      <div class="showcase-tab" [class.active]="activeTab() === 'product'" (click)="setActiveTab('product')">
+        <div class="tab-header">
+          <div class="tab-icon icon-coral">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
               <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
               <line x1="12" y1="22.08" x2="12" y2="12"></line>
             </svg>
           </div>
+          <span class="tab-title">Gather product feedback</span>
         </div>
-        <div class="showcase-content">
-          <span class="showcase-tag">Product</span>
-          <h3 class="showcase-title">Product Feedback</h3>
-          <p class="showcase-description">
-            Gather user insights to guide roadmap decisions and build features customers love.
-          </p>
+        <div class="tab-content">
+          <p class="tab-description">Collect feature requests, bug reports, and user satisfaction scores. Build what your customers actually want.</p>
+          <a href="#" class="tab-link">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
       
-      <div class="showcase-card">
-        <div class="showcase-icon-visual theme-green">
-          <span class="shape shape-1"></span>
-          <span class="shape shape-2"></span>
-          <span class="shape shape-3"></span>
-          <div class="icon-container">
+      <div class="showcase-tab" [class.active]="activeTab() === 'analytics'" (click)="setActiveTab('analytics')">
+        <div class="tab-header">
+          <div class="tab-icon icon-blue">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <line x1="18" y1="20" x2="18" y2="10"></line>
               <line x1="12" y1="20" x2="12" y2="4"></line>
               <line x1="6" y1="20" x2="6" y2="14"></line>
             </svg>
           </div>
+          <span class="tab-title">Powerful analytics dashboards</span>
         </div>
-        <div class="showcase-content">
-          <span class="showcase-tag">Analytics</span>
-          <h3 class="showcase-title">Powerful Dashboards</h3>
-          <p class="showcase-description">
-            Visualize trends, track KPIs, and export reports. Make data-driven decisions confidently.
-          </p>
+        <div class="tab-content">
+          <p class="tab-description">Real-time reporting, custom dashboards, and automated exports. Make data-driven decisions with confidence.</p>
+          <a href="#" class="tab-link">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="showcase-tab" [class.active]="activeTab() === 'training'" (click)="setActiveTab('training')">
+        <div class="tab-header">
+          <div class="tab-icon icon-amber">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <span class="tab-title">Training & assessment</span>
+        </div>
+        <div class="tab-content">
+          <p class="tab-description">Create quizzes, assessments, and certification tests. Track progress and identify knowledge gaps.</p>
+          <a href="#" class="tab-link">
+            Learn more
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Scroll Indicators -->
-  <div class="showcase-indicators">
-    <span class="indicator active"></span>
-    <span class="indicator"></span>
-    <span class="indicator"></span>
-    <span class="indicator"></span>
-    <span class="indicator"></span>
+    
+    <!-- Right side - Visual display -->
+    <div class="showcase-visual">
+      <div class="showcase-visual-container">
+        <!-- AI Insights Visual -->
+        <div class="visual-panel" [class.active]="activeTab() === 'ai-insights'">
+          <div class="illustrated-visual visual-ai-insights">
+            <div class="visual-bg">
+              <div class="blob blob-1"></div>
+              <div class="blob blob-2"></div>
+            </div>
+            <div class="insight-cards">
+              <div class="insight-card">
+                <div class="card-header">
+                  <span class="card-title">Customer Satisfaction</span>
+                  <span class="card-badge">AI Analyzed</span>
+                </div>
+                <div class="card-metric">8.7/10</div>
+                <div class="card-trend">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                  +12% from last month
+                </div>
+              </div>
+              <div class="insight-card">
+                <div class="card-header">
+                  <span class="card-title">Response Trends</span>
+                </div>
+                <div class="card-chart">
+                  <div class="bar" style="height: 40%"></div>
+                  <div class="bar" style="height: 55%"></div>
+                  <div class="bar" style="height: 45%"></div>
+                  <div class="bar" style="height: 70%"></div>
+                  <div class="bar" style="height: 60%"></div>
+                  <div class="bar" style="height: 85%"></div>
+                  <div class="bar" style="height: 75%"></div>
+                  <div class="bar" style="height: 90%"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ai-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              Powered by AI
+            </div>
+          </div>
+        </div>
+        
+        <!-- Multi-Channel Visual -->
+        <div class="visual-panel" [class.active]="activeTab() === 'multichannel'">
+          <div class="illustrated-visual visual-multichannel">
+            <div class="visual-bg">
+              <div class="blob blob-1"></div>
+              <div class="blob blob-2"></div>
+            </div>
+            <div class="channel-grid">
+              <div class="channel-card">
+                <div class="channel-icon email">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <span class="channel-name">Email</span>
+                <span class="channel-stat">45% responses</span>
+              </div>
+              <div class="channel-card">
+                <div class="channel-icon sms">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <span class="channel-name">SMS</span>
+                <span class="channel-stat">30% responses</span>
+              </div>
+              <div class="channel-card">
+                <div class="channel-icon web">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <span class="channel-name">Web</span>
+                <span class="channel-stat">15% responses</span>
+              </div>
+              <div class="channel-card">
+                <div class="channel-icon social">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </div>
+                <span class="channel-name">Social</span>
+                <span class="channel-stat">10% responses</span>
+              </div>
+            </div>
+            <div class="center-orb">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4"></path>
+                <path d="M12 8h.01"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Employee Experience Visual -->
+        <div class="visual-panel" [class.active]="activeTab() === 'employee'">
+          <div class="illustrated-visual visual-employee">
+            <div class="employee-dashboard">
+              <div class="dashboard-header">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="dashboard-content">
+                <div class="metric-row">
+                  <div class="metric-item">
+                    <div class="metric-value">78</div>
+                    <div class="metric-label">eNPS Score</div>
+                  </div>
+                  <div class="metric-item">
+                    <div class="metric-value">92%</div>
+                    <div class="metric-label">Participation</div>
+                  </div>
+                  <div class="metric-item">
+                    <div class="metric-value">4.2</div>
+                    <div class="metric-label">Avg Rating</div>
+                  </div>
+                </div>
+                <div class="sentiment-section">
+                  <div class="sentiment-title">Sentiment Analysis</div>
+                  <div class="sentiment-bars">
+                    <div class="sentiment-bar">
+                      <span class="bar-label">Positive</span>
+                      <div class="bar-track">
+                        <div class="bar-fill positive" style="width: 68%"></div>
+                      </div>
+                      <span class="bar-value">68%</span>
+                    </div>
+                    <div class="sentiment-bar">
+                      <span class="bar-label">Neutral</span>
+                      <div class="bar-track">
+                        <div class="bar-fill neutral" style="width: 22%"></div>
+                      </div>
+                      <span class="bar-value">22%</span>
+                    </div>
+                    <div class="sentiment-bar">
+                      <span class="bar-label">Negative</span>
+                      <div class="bar-track">
+                        <div class="bar-fill negative" style="width: 10%"></div>
+                      </div>
+                      <span class="bar-value">10%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Product Feedback Visual -->
+        <div class="visual-panel" [class.active]="activeTab() === 'product'">
+          <div class="illustrated-visual visual-product">
+            <div class="visual-bg">
+              <div class="blob blob-1"></div>
+              <div class="blob blob-2"></div>
+            </div>
+            <div class="feedback-stack">
+              <div class="feedback-card">
+                <div class="feedback-header">
+                  <div class="feedback-user">
+                    <div class="user-avatar">JD</div>
+                    <div class="user-info">
+                      <div class="user-name">Jane Doe</div>
+                      <div class="user-role">Product Manager</div>
+                    </div>
+                  </div>
+                  <div class="feedback-rating">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </div>
+                </div>
+                <p class="feedback-text">"The new dashboard is amazing! Much easier to navigate."</p>
+                <div class="feedback-tags">
+                  <span class="tag">UI/UX</span>
+                  <span class="tag">Dashboard</span>
+                </div>
+              </div>
+              <div class="feedback-card">
+                <div class="feedback-header">
+                  <div class="feedback-user">
+                    <div class="user-avatar">MS</div>
+                    <div class="user-info">
+                      <div class="user-name">Mike Smith</div>
+                      <div class="user-role">Developer</div>
+                    </div>
+                  </div>
+                  <div class="feedback-rating">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </div>
+                </div>
+                <p class="feedback-text">"API integration could use better documentation."</p>
+                <div class="feedback-tags">
+                  <span class="tag">API</span>
+                  <span class="tag">Documentation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Analytics Visual -->
+        <div class="visual-panel" [class.active]="activeTab() === 'analytics'">
+          <div class="illustrated-visual visual-analytics">
+            <div class="analytics-dashboard">
+              <div class="dashboard-nav">
+                <span class="nav-item active">Overview</span>
+                <span class="nav-item">Responses</span>
+                <span class="nav-item">Trends</span>
+                <span class="nav-item">Export</span>
+              </div>
+              <div class="dashboard-body">
+                <div class="chart-container">
+                  <div class="chart-title">Response Rate Over Time</div>
+                  <div class="line-chart">
+                    <div class="chart-grid">
+                      <div class="grid-line"></div>
+                      <div class="grid-line"></div>
+                      <div class="grid-line"></div>
+                      <div class="grid-line"></div>
+                    </div>
+                    <div class="chart-line">
+                      <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+        <defs>
+                          <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color:rgb(0,200,83);stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:rgb(0,200,83);stop-opacity:0" />
+          </linearGradient>
+        </defs>
+                        <path class="area" d="M0,100 Q50,80 100,70 T200,50 T300,30 T400,20 L400,120 L0,120 Z"></path>
+                        <path d="M0,100 Q50,80 100,70 T200,50 T300,30 T400,20"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Total Responses</div>
+                  <div class="stat-value">12,847</div>
+                  <div class="stat-change">+18% this week</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-label">Avg. Completion</div>
+                  <div class="stat-value">94.2%</div>
+                  <div class="stat-change">+3% this week</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Training Visual -->
+        <div class="visual-panel" [class.active]="activeTab() === 'training'">
+          <div class="illustrated-visual visual-training">
+            <div class="training-module">
+              <div class="module-header">
+                <span class="module-badge">Course Progress</span>
+                <div class="module-title">Customer Service Excellence</div>
+              </div>
+              <div class="module-content">
+                <div class="progress-section">
+                  <div class="progress-header">
+                    <span class="progress-label">Module 3 of 5</span>
+                    <span class="progress-value">60% Complete</span>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" style="width: 60%"></div>
+                  </div>
+                </div>
+                <div class="quiz-preview">
+                  <div class="quiz-title">Quick Assessment</div>
+                  <div class="quiz-options">
+                    <div class="quiz-option">
+                      <span class="option-indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </span>
+                      <span class="option-text">Active listening is key to customer service</span>
+                    </div>
+                    <div class="quiz-option correct">
+                      <span class="option-indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </span>
+                      <span class="option-text">Empathy helps resolve complaints faster</span>
+                    </div>
+                    <div class="quiz-option">
+                      <span class="option-indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </span>
+                      <span class="option-text">Speed is more important than accuracy</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -541,7 +797,7 @@
           <div class="ai-feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
-            </svg>
+      </svg>
           </div>
           <div class="ai-feature-content">
             <div class="ai-feature-title">Sentiment Analysis</div>
@@ -719,7 +975,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
           <polyline points="22 4 12 14.01 9 11.01"></polyline>
-        </svg>
+          </svg>
         <span>HIPAA Compliant</span>
       </div>
     </div>
@@ -767,13 +1023,13 @@
           <a href="#" class="social-link" aria-label="GitHub">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-            </svg>
-          </a>
+          </svg>
+        </a>
           <a href="#" class="social-link" aria-label="YouTube">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
               <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-            </svg>
-          </a>
+          </svg>
+        </a>
         </div>
       </div>
       
